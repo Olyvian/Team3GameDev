@@ -305,7 +305,7 @@ Animator:
   m_GameObject: {fileID: 1670619258}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4a3f5e9c2cd14443ad3bf020a5f33de, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -486,10 +486,22 @@ MonoBehaviour:
     m_Bits: 63
   m_GroundCheck: {fileID: 1961293897}
   m_CeilingCheck: {fileID: 10079201}
-  m_CrouchDisableCollider: {fileID: 0}
+  m_CrouchDisableCollider: {fileID: 1670619265}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1670619268}
+        m_TargetAssemblyTypeName: Player_Movement2, Assembly-CSharp
+        m_MethodName: onLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -507,6 +519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller2D: {fileID: 1670619267}
   runspeed: 40
+  animator: {fileID: 1670619261}
 --- !u!1 &1928910931
 GameObject:
   m_ObjectHideFlags: 0
