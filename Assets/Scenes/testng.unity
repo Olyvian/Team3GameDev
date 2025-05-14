@@ -677,7 +677,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045591436, y: -0.6536366}
+  m_Offset: {x: 0.043697786, y: -0.6536366}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 1}
@@ -688,7 +688,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28561616, y: 0.30549765}
+  m_Size: {x: 0.26667964, y: 0.30549765}
   m_EdgeRadius: 0
 --- !u!58 &1670619266
 CircleCollider2D:
@@ -779,6 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller2D: {fileID: 1670619267}
   runspeed: 40
+  rb: {fileID: 1670619260}
   animator: {fileID: 1670619261}
 --- !u!1 &1928910931
 GameObject:
@@ -935,9 +936,9 @@ Transform:
   m_GameObject: {fileID: 1961293896}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05985703, y: -0.958, z: 0.06145487}
+  m_LocalPosition: {x: 0.05985703, y: -0.93, z: 0.06145487}
   m_LocalScale: {x: 0.11736667, y: 0.14172582, z: 1.1072329}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1670619263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
