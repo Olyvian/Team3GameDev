@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Team3GameDev.sln"
+    "dotnet.defaultSolution": "Team3GameDev.sln",
+    "FSharp.suggestGitignore": false
 }
