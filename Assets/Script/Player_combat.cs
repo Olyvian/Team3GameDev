@@ -1,24 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_combat : MonoBehaviour
+public class Player_Attack : MonoBehaviour
 {
-
     public Animator animator;
-    // Update is called once per frame
-    void Start() {
-        animator = GetComponent<Animator>();
-    }
-    void Update()
+    public GameObject weaponHitboxObject; // Assign your "WeaponHitbox" GameObject here
+
+    public float attackRate = 2f; // Attacks per second
+    private float nextAttackTime = 0f;
+
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (weaponHitboxObject != null)
         {
-            attack();
+            weaponHitboxObject.SetActive(false); // Ensure it's disabled at start
+        }
+        else
+        {
+            Debug.LogError("WeaponHitbox GameObject not assigned to PlayerAttackWithHitbox script!");
         }
     }
 
-    void attack(){
-        animator.SetTrigger("attack");
+    void Update()
+    {
+        if (Time.time >= nextAttackTime)
+        {
+            if (Input.GetKeyDown(KeyCode.Tab)) // Or your preferred attack button
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+        }
+    }
+
+    void Attack()
+    {
+        // 1. Play attack animation
+        animator.SetTrigger("attack"); // "Attack" should be a Trigger parameter in your Animator
+        // The animation itself will call EnableHitbox() and DisableHitbox() via events
+    }
+
+    // --- Animation Event Functions ---
+    // These functions will be called by events in your attack animation clip.
+
+    public void EnableAttackHitbox()
+    {
+        if (weaponHitboxObject != null)
+        {
+            weaponHitboxObject.SetActive(true);
+            // The OnEnable() in WeaponHitbox.cs will clear the list of hit enemies.
+        }
+    }
+
+    public void DisableAttackHitbox()
+    {
+        
+            weaponHitboxObject.SetActive(false);
+        
     }
 }
