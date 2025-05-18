@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 266620170}
   - component: {fileID: 266620169}
   - component: {fileID: 266620171}
+  - component: {fileID: 266620172}
   m_Layer: 0
   m_Name: Parallax0
   m_TagString: Untagged
@@ -211,7 +212,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -20
   m_Sprite: {fileID: 21300000, guid: cc17e72f33692b6428cbfb02e94af490, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -245,13 +246,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266620168}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b799bdb2cb770a42ba931220723f3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1132084943}
   subject: {fileID: 1670619263}
+--- !u!114 &266620172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266620168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761785e9f971d3845a8d3418768a2496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 1132084944}
+  parallaxEffectX: 0.1
+  parallaxEffectY: 0
+  infiniteHorizontal: 1
+  infiniteVertical: 0
 --- !u!1 &420140569
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,6 +411,7 @@ GameObject:
   - component: {fileID: 523653572}
   - component: {fileID: 523653571}
   - component: {fileID: 523653573}
+  - component: {fileID: 523653574}
   m_Layer: 0
   m_Name: Parallax1
   m_TagString: Untagged
@@ -440,7 +459,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -6
   m_Sprite: {fileID: 21300000, guid: e41f65002ee256d4cba688cd478229b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -481,6 +500,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1132084943}
   subject: {fileID: 1670619263}
+--- !u!114 &523653574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523653570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761785e9f971d3845a8d3418768a2496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 1132084944}
+  parallaxEffectX: 0.4
+  parallaxEffectY: 0
+  infiniteHorizontal: 1
+  infiniteVertical: 0
 --- !u!1 &763280476
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +528,7 @@ GameObject:
   - component: {fileID: 763280478}
   - component: {fileID: 763280477}
   - component: {fileID: 763280479}
+  - component: {fileID: 763280480}
   m_Layer: 0
   m_Name: Parallax2
   m_TagString: Untagged
@@ -580,6 +617,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1132084943}
   subject: {fileID: 1670619263}
+--- !u!114 &763280480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763280476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761785e9f971d3845a8d3418768a2496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 1132084944}
+  parallaxEffectX: 1
+  parallaxEffectY: 0
+  infiniteHorizontal: 1
+  infiniteVertical: 0
 --- !u!1 &1132084941
 GameObject:
   m_ObjectHideFlags: 0
