@@ -261,7 +261,7 @@ MonoBehaviour:
   target: {fileID: 1670619263}
   smoothTime: 0.3
   offset: {x: 0, y: -2, z: -10}
-  useBounds: 0
+  useBounds: 1
   minCameraBounds: {x: 0, y: 0}
   maxCameraBounds: {x: 0, y: 0}
 --- !u!1 &1184960914
@@ -571,7 +571,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
