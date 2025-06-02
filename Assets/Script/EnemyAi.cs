@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class EnemyAi : MonoBehaviour {
 private bool isStunned = false;
 private float stunTimer = 0f;
+
 public void Stun(float duration)
 {
     isStunned = true;
@@ -23,6 +24,8 @@ void Update() // Or FixedUpdate for physics related movement
         }
         return; // Don't execute normal AI logic while stunned
     }
+
+    // ... your normal AI movement and attack logic ...
 }
 
 
